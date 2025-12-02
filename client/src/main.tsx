@@ -1,18 +1,4 @@
-// import { StrictMode } from "react";
-// import { createRoot } from "react-dom/client";
-import "./index.css";
-// import App from "./App.tsx";
-// import { BrowserRouter } from "react-router-dom";
-
-// createRoot(document.getElementById("root")!).render(
-//   <StrictMode>
-//     <BrowserRouter>
-//       <App />
-//     </BrowserRouter>{" "}
-//   </StrictMode>
-// );
-
-
+import './index.css'
 
 // src/main.tsx or index.tsx
 import React from "react";
@@ -23,7 +9,7 @@ import { AuthProvider } from "./context/AuthContext";
 import LandingPage from "../src/components/pages/LandingPage";
 import Signup from "../src/components/pages/SignupModel";
 import Signin from "../src/components/pages/Signin";
-import Home from "../src/components/pages/Home";
+// import Home from "../src/components/pages/Home";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import CompleteProfile from "./components/pages/CompleteProfile";
 import DashboardPage from "./components/pages/DashboardPage";
@@ -35,13 +21,21 @@ const router = createBrowserRouter([
   { path: "/signin", element: <Signin /> },
   { path: "/complete-profile", element: <CompleteProfile /> },
 
-  { path: "/dashboard", element: <DashboardPage /> },
+  // { path: "/dashboard", element: <DashboardPage /> },
   // protected route
-  {
-    path: "/home",
+  // {
+  //   path: "/home",
+  //   element: (
+  //     <ProtectedRoute>
+  //       <Home />
+  //     </ProtectedRoute>
+  //   ),
+  // },
+    {
+    path: "/dashboard",
     element: (
       <ProtectedRoute>
-        <Home />
+        <DashboardPage />
       </ProtectedRoute>
     ),
   },

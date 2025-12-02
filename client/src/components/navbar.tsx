@@ -132,7 +132,7 @@ export default function Navbar() {
 
             <div className="w-full space-y-4">
               <Link
-                to="/login"
+                to="/signin"
                 className="flex items-center justify-center gap-2 w-full py-3 text-base font-medium text-slate-600 hover:text-slate-900 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
